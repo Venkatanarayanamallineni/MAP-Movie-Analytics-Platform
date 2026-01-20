@@ -1,0 +1,43 @@
+﻿Local Here(
+	table1 = Open( "C:\Users\mvn\OneDrive\Desktop\jmp sample.jmp" );
+	table1 << Text Explorer(
+		Text Columns( :words ),
+		Set Regex(
+			Library( "Money" ),
+			Library( "Common Emoticons" ),
+			Library( "Words" ),
+			Library( "HTML Link Grabber" ),
+			Library( "Time" ),
+			Library( "Numbers" ),
+			Library( "Phrasing Punctuation" )
+		),
+		Add Stop Words( {"based"} ),
+		Minimum Characters per Word( 4 ),
+		Show Word Cloud( 1 ),
+		Layout( "Centered" ),
+		Coloring( "By column values", :Sentiment ),
+		Stemming( "Stem All Terms" ),
+		Language( "English" ),
+		SendToReport(
+			Dispatch(
+				{"Term and Phrase Lists"},
+				"",
+				TableBox,
+				{Set Summary Behavior( "Collapse" )}
+			),
+			Dispatch(
+				{"Word Cloud"},
+				"1",
+				ScaleBox,
+				{Legend Model(
+					1,
+					Properties(
+						0,
+						{gradient( {Color Theme( "Green to Black to Red"(1) )} )},
+						Item ID( "Sentiment", 1 )
+					)
+				)}
+			)
+		)
+	);
+)
