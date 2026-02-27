@@ -46,6 +46,23 @@ Unlike traditional rating-based analysis, this platform uncovers how audiences *
 * Enhance decision-making using **interactive dashboards**
 * Apply **big data engineering and analytics techniques**
 
+   ## Tech Stack
+  - Python (Pandas, NumPy, Scikit-learn)
+  - NLP (TF-IDF, Logistic Regression)
+  - Power BI (DAX dashboards)
+  - SQL (data extraction)
+  
+  ## Key Results
+  - Processed 1M+ movie records with 99%+ data quality
+  - Built sentiment classifier: 82% accuracy, 0.79 precision, 0.81 recall
+  - Analyzed 50K+ reviews (positive/negative/neutral)
+  
+  ## Business Impact
+  - Discovered r=0.67 correlation between sentiment and box office revenue
+  - Identified optimal release timing strategies
+  - Created executive dashboards for content strategy decisions
+
+  
 ---
 
 ## 📂 Data Sources
